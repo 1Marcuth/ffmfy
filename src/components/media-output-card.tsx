@@ -37,7 +37,7 @@ const MediaOutputCard: FC<Props> = ({
                     {source && outputMediaType && outputFileName && inputFileExtension && outputFileExtension ? (
                         <span>Resultado da conversão <i className="bi bi-arrow-left-right text-slate-500"/></span>
                     ) : (
-                        <span className="animate-pulse">Convertendo seu arquivo..</span>
+                        <span className="animate-pulse">Convertendo seu arquivo...</span>
                     )} 
                 </CardTitle>
                 <CardDescription className="text-center block">
