@@ -3,9 +3,9 @@ import { FC } from "react"
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card"
 import isMedia, { MediaType } from "../lib/is-media"
+import { Progress } from "./ui/progress"
 import { Button } from "./ui/button"
 import Audio from "./audio"
-import { Progress } from "./ui/progress"
 
 type Props = {
     inputFileExtension?: string

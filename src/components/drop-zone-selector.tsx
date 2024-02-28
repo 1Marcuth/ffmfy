@@ -1,5 +1,5 @@
+import { getFileExtension, openFile } from "client-helper"
 import { FC, useEffect, useState } from "react"
-import { getFileExtension, openFile } from "client-helper/dist"
 
 import handleDragFile from "src/lib/handle-drag-file"
 

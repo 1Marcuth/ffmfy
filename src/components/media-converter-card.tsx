@@ -5,9 +5,10 @@ import { toBlobURL } from "@ffmpeg/util"
 import { FFmpeg } from "@ffmpeg/ffmpeg"
 
 import { Select, SelectGroup, SelectTrigger, SelectContent, SelectValue, SelectLabel, SelectItem } from "./ui/select"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
-import DropZoneSelector from "./drop-zone-selector"
 import { MediaFileFormat, supportedAudioFormats, supportedVideoFormats } from "../settings"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
+import removeDuplicates from "../lib/remove-duplicates"
+import DropZoneSelector from "./drop-zone-selector"
 import isMedia from "../lib/is-media"
 import { Button } from "./ui/button"
 
@@ -44,11 +45,7 @@ const MediaConverterCard: FC<Props> = ({ onButtonConvertClick, onConvertProgress
             setInputFileFormt(newInputFileExtesion)
 
             if (mediaType === "video") {
-                const videoAndAudioFormats = [...supportedVideoFormats, ...supportedAudioFormats]
-                    .filter((format, i, self) => {
-                        return self.indexOf(format) === i
-                    })
-
+                const videoAndAudioFormats = removeDuplicates([...supportedVideoFormats, ...supportedAudioFormats])
                 setFileOutputFormats(videoAndAudioFormats)
             } else if (mediaType === "audio") {
                 setFileOutputFormats(supportedAudioFormats)

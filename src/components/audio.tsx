@@ -1,7 +1,8 @@
 import { FC, useEffect, useRef, useState } from "react"
-import { Progress } from "./ui/progress"
 import { getFileExtension } from "client-helper"
+
 import formatSecondsToTime from "../lib/seconds-to-time"
+import { Progress } from "./ui/progress"
 
 type PlayOrPause = "play" | "pause"
 

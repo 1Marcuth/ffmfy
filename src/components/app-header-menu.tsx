@@ -10,9 +10,9 @@ type MenuItem = {
 
 const menuItems: MenuItem[] = [
     {
-        name: "Home",
-        icon: "bi bi-house",
-        path: "/"
+        name: "GitHub",
+        icon: "bi bi-github",
+        path: "https://github.com/1Marcuth/ffmfy"
     }
 ]
 
