@@ -93,7 +93,6 @@ const supportedVideoFormats = [
     "GIF",
     "MP3",
     "WAV",
-    "OGG",
     "M4A",
     "M4R",
     "WMA",
